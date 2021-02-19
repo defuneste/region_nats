@@ -22,6 +22,8 @@ Les champs pour `reg_nat.shp` sont :
 * `reg_nat` : Le nom de la région naturelle
 * `ss_reg_nat` : une region qui semblait apartenir à une région plus englobante (cf. exemple plus bas)
 
+Le reg_nat.shp est passé en geojson et est plus à jour. 
+
 Les champs pour `reg_nat_non_delim.geojson` sont :
 
 * `id` : vide pour le moment
