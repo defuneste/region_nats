@@ -10,24 +10,28 @@ Elle est disponible en `./sources` au besoin.
 
 Il a été fait sous QGIS (3.16). Les points d'amers (n = 30) sont dans `/data/Les_régions_naturelles_de_Frances.jpg.points`. La transformation utilisée, après plusieurs tests, est la *Thin plate spline* et un resampling linéaire. 
 
-Le .tif en sortie est dans `./data/Les_regions_naturelles_de_France_modifiedv4.tif`
+Le .tif en sortie est dans `./data/Les_regions_naturelles_de_France_modifiedv4.tif`.  
 
 ## Digitalisation 
 
-Après des tests, pas folichons via Gimp, pas eu le choix de la faire à la mains. Elle a été faite principalement au 1:500 000 et 1:350 000. 
+Après des tests, pas folichons via Gimp, pas eu le choix de la faire à la mains. Elle a été faite principalement au 1:500 000 et 1:350 000. Deux types de digitalisation ont été faites : la première essaie de delimité des ces "pays" (`reg_nat.shp & co`) représntés par des polygones, la seconde localise par des points des "pays" sans limite apparente (`reg_nat_non_delim.geojson`). 
 
-Les champs sont : 
+Les champs pour `reg_nat.shp` sont : 
 
 * `Id` : un identifiant : pas encore renseigné (TODO une fois le fichier un peu stabilisé)
 * `reg_nat` : Le nom de la région naturelle
 * `ss_reg_nat` : une region qui semblait apartenir à une région plus englobante (cf. exemple plus bas)
 
+Les champs pour `reg_nat_non_delim.geojson` sont :
+
+* `id` : vide pour le moment
+* `reg_nat` : le nom sur la carte présent mais ne semblant être delimité (le point est au milieu du nom)
 
 ### Couacs et sources d'erreurs 
 
 Les limites de ces régions sont materialisées en noir mais parfois recouvertes par une ligne blanche plus épaisse. Dans ce cas j'ai essayé de digitaliser au milieu ou de suivre la trajectoire d'une ligne noire. Dans certains cas il n'est pas evident de savoir si on a une region de delimitée (dont les limites sont recouvertes par le trait blanc) ou si on a une région positionnée mais sans limite. Il semble y avoir deux couleurs pour les noms des "régions naturelles": un noir et un noir grisé, le noir grisé me semblait apartenir à une categorie hierarchique plus importante (à tord ?) et j'ai utilisé ce critère en cas de doute. 
 
-Je n'ai representé les regions, souvent nommées "pays", que quand ils avaient une delimitation (trait noir). La carte d'origine comporte plus de pays mais parfois sans delimitation (sans doute des regions localiables mais non delimitable). Une solution serait de faire un fichier ponctuel avec le nom de ces regions associée au point (-> à rejouter dans TODO). 
+Je n'ai representé les regions, souvent nommées "pays", que quand ils avaient une delimitation (trait noir). La carte d'origine comporte plus de pays mais parfois sans delimitation (sans doute des regions localiables mais non delimitable). La solution a été de faire un fichier ponctuel avec le nom de ces regions associée au point (`reg_nat_non_delim.geojson`). 
 
 ### Avec un exemple :
 
@@ -56,8 +60,8 @@ J'ai mis le resultat sur github par habitude mais on peut deplacer à n'importe 
 * [ ] un index 
 * [ ] expliciter les valeurs manquantes
 * [ ] rajouter la corse (probalement juste après ce push)
-* [ ] orthographe accent / capitalisations : être consistant
-* [ ] un fichier de point avec les régions non delimitées
+* [x] orthographe accent / capitalisations : être consistant (une première passe à été faite)
+* [x] un fichier de point avec les régions non delimitées
 * [ ] autres ?
 
 
