@@ -1,6 +1,6 @@
 # Digitalisation de la carte des "régions naturelles ou pays traditionnels"
 
-L'objectif est d'avoir une digitalisation de la carte des "regions naturelles ou pays traditionnel". 
+L'objectif est d'avoir une digitalisation de la carte des "regions naturelles ou pays traditionnels". 
 
 Cette carte documente le [wiki de ces regions](https://fr.wikipedia.org/wiki/Liste_des_r%C3%A9gions_naturelles_de_France). Elle a été conçue par **Raymond Tarrit**. La création dans wikipedia est datée du 7 novembre 2019.
 
@@ -14,7 +14,7 @@ Le .tif en sortie est dans `./data/Les_regions_naturelles_de_France_modifiedv4.t
 
 ## Digitalisation 
 
-Après des tests, pas folichons via Gimp, pas eu le choix de la faire à la mains. Elle a été faite principalement au 1:500 000 et 1:350 000. Deux types de digitalisation ont été faites : la première essaie de delimité des ces "pays" (`reg_nat.shp & co`) représntés par des polygones, la seconde localise par des points des "pays" sans limite apparente (`reg_nat_non_delim.geojson`). 
+Après des tests, pas folichons via Gimp, pas eu le choix de la faire à la main. Elle a été faite principalement au 1:500 000 et 1:350 000. Deux types de digitalisation ont été faites : la première essaie de delimiter ces "pays" (`reg_nat.shp & co`) représentés par des polygones, la seconde localise par des points des "pays" sans limite apparente (`reg_nat_non_delim.geojson`). 
 
 Les champs pour `reg_nat.shp` sont : 
 
